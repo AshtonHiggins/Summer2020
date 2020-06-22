@@ -10,7 +10,7 @@ And make a do loop
 Then I will set up the solve method
 I will make an if statement if the number is odd
 	Print weird
-Then three else if statements if the number is even
+Then I will write three else if statements if the number is even
 	Each will have different ranges in value
 	Two will print not weird, and one will print weird
 */
