@@ -1,4 +1,5 @@
 /*
+ASHTON HIGGINS STRING CHALLENGE
 Set up a keyboard for them to type
 
 Main Method:
