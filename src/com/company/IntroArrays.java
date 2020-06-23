@@ -15,7 +15,7 @@ Create this all in a for loop so that it prints however many times the user asks
 */
 package com.company;
 import java.util.*;
-public class Arrays {
+public class IntroArrays {
     public static void main(String[] args) {
         Scanner Keyboard = new Scanner(System.in);
         Random rand = new Random();
@@ -28,7 +28,7 @@ public class Arrays {
         int total=0;
         for (int x=0; x<days; x++){
             temp[x] = rand.nextInt(85) + 25;
-            System.out.println("On day "+x+1+" the high temperature was: "+rand);
+            System.out.println("On day "+x+1+" the high temperature was: "+ rand);
             total=total+temp[x];
         }
         double average= (double) total/days;
