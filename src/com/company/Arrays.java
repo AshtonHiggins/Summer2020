@@ -32,7 +32,6 @@ public class Arrays {
             total=total+temp[x];
         }
         double average= (double) total/days;
-        for()
     }
 }
 

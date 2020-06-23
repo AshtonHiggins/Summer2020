@@ -21,8 +21,10 @@ String odd letter
 Return evenletter+” “+oddletter
  */
 package com.company;
-import java.util.*;
-public class AshtonHigginsStringChallenge {
+
+import java.util.Scanner;
+
+public class ONELINEAshtonHigginsStringChallenge {
     public static void main(String[] args) {
        int LenString;
        Scanner Keyboard= new Scanner(System.in);
