@@ -18,7 +18,7 @@ import java.util.*;
 public class Arrays {
     public static void main(String[] args) {
         Scanner Keyboard = new Scanner(System.in);
-        Random rand= new Random();
+        Random rand = new Random();
         int days;
         do {
             System.out.print("How many days temperature (between 2 and 100)? Your answer: ");
@@ -28,10 +28,11 @@ public class Arrays {
         int total=0;
         for (int x=0; x<days; x++){
             temp[x] = rand.nextInt(85) + 25;
-            System.out.print("On day "+x+1+" the high temperature was: "+rand);
+            System.out.println("On day "+x+1+" the high temperature was: "+rand);
             total=total+temp[x];
         }
         double average= (double) total/days;
+        System.out.println("The average temperature for "+ days +" days was: "+average );
     }
 }
 
