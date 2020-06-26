@@ -74,8 +74,19 @@ public class AshtonFinalProject {
             answer = userInput.next();
             fileScan.close();
         }while(answer.contains("y") || answer.contains("Y"));
-        System.out.println("Total games won: "+countWins);
-        System.out.println("Total games played: "+countAttempts);
+        for(int dash=1; dash<24; dash++){
+            System.out.print("-");
+    }
+        System.out.println(" ");
+        System.out.print("|");
+        System.out.print("Total games won: "+countWins);
+        System.out.println("   |");
+        System.out.print("|");
+        System.out.print("Total games played: "+countAttempts);
+        System.out.println("|");
+        for(int dash=1; dash<24; dash++){
+            System.out.print("-");
+        }
 
     }
 
