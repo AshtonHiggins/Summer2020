@@ -16,38 +16,26 @@ make array at index 2 equal to temporary variable
 print final array with the swaps
  */
 package com.company;
-import java.util.Arrays;
+import java.io.*;
 import java.util.*;
-public class AshtonArrays {
-    public static void main(String[] args) {
-        Random rand1 = new Random();
-        int size = rand1.nextInt(5) + 5;
-        int[] array1 = new int[size];
-        int index1;
-        int index2;
-
-        do {
-            index1 = rand1.nextInt(size);
-            index2 = rand1.nextInt(size);
-        }
-            while (index1 == index2) ;
-
-            System.out.println(index1);
-            System.out.println(index2);
-
-            for (int i = 0; i < array1.length; i++) {
-                array1[i] = rand1.nextInt(98) + 1;
+    public class AshtonArrays {
+        public static void main(String[] args) throws FileNotFoundException{
+            File file= new File("C:\\Users\\ashto\\IdeaProjects\\Summer2020\\src\\com\\company\\Weather.txt");
+            Scanner scan= new Scanner(file);
+            double temp1=0;
+            double temp2=0;
+            if (scan.hasNextDouble()){
+                temp1=scan.nextDouble();
             }
-
-            System.out.println(Arrays.toString(array1));
-            array1=swap(array1, index1, index2);
-            System.out.println(Arrays.toString(array1));
+            while(scan.hasNextLine()){
+                if (scan.hasNextDouble()){
+                    temp2=scan.nextDouble();
+                    System.out.printf("the difference between %.2f and %.2f is %7.2f\n ",temp1,temp2, (temp2-temp1));
+                    temp1=temp2;
+                }
+                else{
+                    String trash= scan.next();
+                }
+            }
+        }
     }
-    public static int[] swap (int[] array1, int index1, int index2){
-        int temp = array1[index1];
-        array1[index1] = array1[index2];
-        array1[index2] = temp;
-
-        return array1;
-    }
-}
