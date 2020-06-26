@@ -50,24 +50,19 @@ public class AshtonFinalProject {
                     System.out.println("Guess an integer between 1-100 inclusive");
                     int intGuess = userInput.nextInt();
                     countWins = gameInteger(intGuess, fileScan, countWins);
-                    System.out.println("Total games won: "+countWins);
-                    System.out.println("Total games played: "+countAttempts);
                 }
                 else {
                     System.out.println("Guess an double between 1.0 and 100.0 inclusive");
                     double doubleGuess = userInput.nextDouble();
                     doubleGuess = (((int)(doubleGuess*100))/100.0);
                     countWins = gameDouble(doubleGuess, fileScan, countWins);
-                    System.out.println("Total games won: "+countWins);
-                    System.out.println("Total games played: "+countAttempts);
                 }
             }
             else{
                 System.out.println("Enter a state or country:");
                 String states = userInput.next();
                 countWins = gameWords(states, fileScan, countWins);
-                System.out.println("Total games won: "+countWins);
-                System.out.println("Total games played: "+countAttempts);
+
             }
 
             System.out.println("Do you want to play again?");
@@ -93,6 +88,7 @@ public class AshtonFinalProject {
     public static int gameWords (String states, Scanner fileScan, int countWins) {
         while (fileScan.hasNext()) {
                 if (fileScan.next().equals(states)) {
+                    System.out.println("Correct!");
                     countWins++;
                     break;
                 }
@@ -105,6 +101,7 @@ public class AshtonFinalProject {
         while (fileScan.hasNext()) {
                 if (fileScan.hasNextInt()) {
                     if (fileScan.nextInt() == intGuess) {
+                        System.out.println("Correct!");
                         countWins++;
                         break;
                     }
@@ -118,6 +115,7 @@ public class AshtonFinalProject {
         while (fileScan.hasNext()) {
             if (fileScan.hasNextDouble()){
                 if (fileScan.nextDouble() == (doubleGuess)) {
+                    System.out.println("Correct!");
                     countWins++;
                     break;
                 }
